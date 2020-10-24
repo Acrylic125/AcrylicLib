@@ -4,31 +4,31 @@ This is developed with the use of kotlin. This is designed for android developme
 <b>Maven:</b>
 ```
 <repositories>
-	<repository>
-		<id>jitpack.io</id>
-		<url>https://jitpack.io</url>
-	</repository>
+  <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
 </repositories>
 ```
 ```
 <dependency>
   <groupId>com.github.Acrylic125</groupId>
-	<artifactId>AcrylicLib</artifactId>
-	<version>v1.0a</version>
+  <artifactId>AcrylicLib</artifactId>
+  <version>v1.0a</version>
 </dependency>
 ```
 
 <b>Gradle</b>
 ```
 allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
 }
 ```
 ```
 dependencies {
-	implementation 'com.github.Acrylic125:AcrylicLib:v1.0a'
+  implementation 'com.github.Acrylic125:AcrylicLib:v1.0a'
 }
 ```
