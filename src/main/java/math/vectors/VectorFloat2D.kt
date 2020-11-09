@@ -1,40 +1,42 @@
 package math.vectors
 
-class VectorFloat2D : Vector<VectorFloat2D, Float> {
+class VectorFloat2D(x: Float, y: Float)
+    : AbstractVector2D<VectorFloat2D, Float>(x, y) {
 
-    override fun add(vector: VectorFloat2D): VectorFloat2D {
-        TODO("Not yet implemented")
+    override fun add(x: Float, y: Float): VectorFloat2D {
+        this.x += x
+        this.y += y
+        return this
     }
 
-    override fun subtract(vector: VectorFloat2D): VectorFloat2D {
-        TODO("Not yet implemented")
+    override fun subtract(x: Float, y: Float): VectorFloat2D {
+        return add(-x, -y)
     }
 
-    override fun addEach(value: Float): VectorFloat2D {
-        TODO("Not yet implemented")
+    override fun multiply(x: Float, y: Float): VectorFloat2D {
+        this.x *= x
+        this.y *= y
+        return this
     }
 
-    override fun subtractEach(value: Float): VectorFloat2D {
-        TODO("Not yet implemented")
+    override fun divide(x: Float, y: Float): VectorFloat2D {
+        return multiply(1 / x, 1/ y)
     }
 
-    override fun multiplyEach(value: Float): VectorFloat2D {
-        TODO("Not yet implemented")
+    override fun getMagnitudeSquared(): Double {
+        return (x*x + y*y).toDouble()
     }
 
-    override fun divideEach(value: Float): VectorFloat2D {
-        TODO("Not yet implemented")
+    override fun getDotProduct(vector: VectorFloat2D): Double {
+        return (x * vector.x) + (y * vector.y).toDouble()
     }
 
-    override fun getMagnitude(): Double {
-        TODO("Not yet implemented")
+    override fun toArray(): Array<Float> {
+        return arrayOf(x,y)
     }
 
-    override fun getDotProduct(): Double {
-        TODO("Not yet implemented")
+    override fun clone(): VectorFloat2D {
+        return VectorFloat2D(x, y)
     }
 
-    override fun getAngleBetween(vector: VectorFloat2D): Double {
-        TODO("Not yet implemented")
-    }
 }

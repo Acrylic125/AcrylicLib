@@ -1,6 +1,8 @@
 package math.vectors
 
-interface Vector<T : Vector<T, N>, N : Number> {
+import kotlin.math.sqrt
+
+interface Vector<T : Vector<T, N>, N : Number> : Cloneable {
 
     fun add(vector: T) : T
 
@@ -14,10 +16,16 @@ interface Vector<T : Vector<T, N>, N : Number> {
 
     fun divideEach(value: N) : T
 
-    fun getMagnitude() : Double
+    fun getMagnitudeSquared() : Double
 
-    fun getDotProduct() : Double
+    fun getMagnitude() : Double {
+        return sqrt(getMagnitudeSquared())
+    }
+
+    fun getDotProduct(vector: T) : Double
 
     fun getAngleBetween(vector: T) : Double
+
+    fun toArray() : Array<N>
 
 }

@@ -11,6 +11,8 @@ import com.acrylic.time.TimeConverter
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import files.FileFactory
 import files.JSONFile
+import math.vectors.VectorFloat2D
+import math.vectors.VectorInt2D
 import org.yaml.snakeyaml.Yaml
 
 
