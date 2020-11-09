@@ -15,3 +15,4 @@ fun send(vararg texts : TextBuilder) {
 fun createTextBuilder() : TextBuilder {
     return TextBuilder()
 }
+
