@@ -2,7 +2,7 @@ package com.acrylic.weights
 
 import java.util.*
 
-class Weighter<T : WeightObject?> : AbstractWeigher<T> {
+class Weigher<T : WeightObject?> : AbstractWeigher<T> {
     private val list = ArrayList<T>()
     private var weights = 0.0
 
