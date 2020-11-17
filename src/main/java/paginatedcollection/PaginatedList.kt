@@ -1,5 +1,6 @@
 package com.acrylic.paginatedcollection
 
+import paginatedcollection.PaginatedCollection
 import java.util.function.Consumer
 
 interface PaginatedList<T> : MutableList<T>, PaginatedCollection<T> {
