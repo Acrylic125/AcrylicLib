@@ -1,5 +1,7 @@
-package com.acrylic.weights
+package weights
 
+import com.acrylic.weights.AbstractWeigher
+import com.acrylic.weights.WeightObject
 import java.util.*
 
 class Weigher<T : WeightObject?> : AbstractWeigher<T> {

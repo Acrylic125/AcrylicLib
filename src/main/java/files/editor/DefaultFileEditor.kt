@@ -37,6 +37,11 @@ class DefaultFileEditor : FileEditor {
         return this
     }
 
+    override fun getBoolean(`var`: String): Boolean {
+        val o = getObject(`var`)
+        return if (o is Boolean) o else false
+    }
+
     override fun getDecimalNumber(`var`: String): Number {
         return getNumber(`var`)
     }

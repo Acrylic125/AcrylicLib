@@ -1,4 +1,4 @@
-package com.acrylic.paginatedcollection
+package paginatedcollection
 
 import java.util.*
 

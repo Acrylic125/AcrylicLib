@@ -6,4 +6,9 @@ interface PaginatedCollection<T> : MutableCollection<T>, Paginated<T> {
         return this
     }
 
+    override fun setCollection(collection: Collection<T>) {
+        clear()
+        addAll(collection)
+    }
+
 }

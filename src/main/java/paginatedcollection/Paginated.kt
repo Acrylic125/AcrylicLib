@@ -12,6 +12,8 @@ interface Paginated<T> {
 
     fun getCollection() : Collection<T>
 
+    fun setCollection(collection: Collection<T>)
+
     fun getPageList(page: Int): ArrayList<T>? {
         val list = ArrayList<T>()
         iterate(page) { e: T -> list.add(e) }

@@ -1,6 +1,4 @@
-import com.acrylic.Console
 import com.acrylic.commands.CommandSet
-import com.acrylic.commands.builder.CommandBuilder
 import com.acrylic.commands.defaultcommands.RegisteredCommandsCommand
 import com.acrylic.commands.defaultcommands.StopCommand
 import com.acrylic.text.TextFormat
@@ -8,12 +6,6 @@ import com.acrylic.text.createTextBuilder
 import com.acrylic.text.send
 import com.acrylic.time.Time
 import com.acrylic.time.TimeConverter
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
-import files.FileFactory
-import files.JSONFile
-import math.vectors.VectorFloat2D
-import math.vectors.VectorInt2D
-import org.yaml.snakeyaml.Yaml
 
 
 object AcrylicLib {

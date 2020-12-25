@@ -1,5 +1,3 @@
-package com.acrylic
-
 import com.acrylic.text.send
 import com.acrylic.users.PermissionNode
 import com.acrylic.users.User
