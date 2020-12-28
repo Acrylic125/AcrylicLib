@@ -1,7 +1,7 @@
 package com.acrylic.weights
 
-import com.acrylic.math.chance
-import com.acrylic.math.getRandom
+import math.chance
+import math.getRandom
 import java.util.*
 
 interface AbstractWeigher<T : WeightObject?> {

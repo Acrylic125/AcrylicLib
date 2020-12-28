@@ -1,4 +1,4 @@
-package com.acrylic.math
+package math
 
 import kotlin.math.abs
 import kotlin.math.min
