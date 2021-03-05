@@ -7,7 +7,7 @@ import kotlin.collections.HashSet
 /**
  * There can only be 1 console user instance.
  */
-open class Console() : User {
+open class Console : User {
 
     private val permissions: HashSet<PermissionNode> = HashSet()
     private val id: UUID = UUID.randomUUID()
