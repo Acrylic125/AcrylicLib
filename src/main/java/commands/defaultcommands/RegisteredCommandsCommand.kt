@@ -32,7 +32,7 @@ class RegisteredCommandsCommand : AbstractCommand("/registeredcommands") {
             }
         }
         val set = AcrylicLib.commandMap.getRegisteredCommands()
-        val textBuilder = TextBuilder().appendThenClear("Commands : [ ${set.getPage(page)} / ${set.maxPage} ]", TextFormat.LIGHT_BLUE, TextFormat.BOLD).nextLine()
+        val textBuilder = TextBuilder().appendThenClear("Commands : [ ${set.getPage(page)} / ${set.getLastPage()} ]", TextFormat.LIGHT_BLUE, TextFormat.BOLD).nextLine()
         set.iterate(page) {
              textBuilder.appendThenClear(it.usage, TextFormat.LIGHT_BLUE)
                     .appendThenClear(" ${it.description}", TextFormat.LIGHT_GRAY)

@@ -6,7 +6,7 @@ import kotlin.math.ceil
 
 interface Paginated<T> {
 
-    val maxElementsPerPage: Int
+    var maxElementsPerPage: Int
 
     fun iterate(page: Int, action: Consumer<T>)
 
@@ -21,11 +21,12 @@ interface Paginated<T> {
     }
 
     fun getPage(page: Int): Int {
-        return if (page < 1) 1 else page.coerceAtMost(maxPage)
+        return if (page < 1) 1 else page.coerceAtMost(getLastPage())
     }
 
-    val maxPage: Int
-        get() = ceil(getCollection().size.toFloat() / maxElementsPerPage.toDouble()).toInt()
+    fun getLastPage(): Int {
+        return ceil(getCollection().size.toDouble() / maxElementsPerPage.toDouble()).toInt()
+    }
 
     fun getElementsFrom(page: Int): Int {
         return (getPage(page) - 1) * maxElementsPerPage
