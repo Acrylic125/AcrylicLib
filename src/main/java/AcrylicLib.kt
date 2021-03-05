@@ -1,6 +1,8 @@
 import com.acrylic.commands.CommandSet
+import com.acrylic.commands.builder.CommandBuilder
 import com.acrylic.commands.defaultcommands.RegisteredCommandsCommand
 import com.acrylic.commands.defaultcommands.StopCommand
+import paginatedcollection.PaginatedArrayList
 import com.acrylic.text.TextFormat
 import com.acrylic.text.createTextBuilder
 import com.acrylic.text.send
@@ -23,7 +25,6 @@ object AcrylicLib {
                         .nextLine().append("Developed by ", TextFormat.LIGHT_GRAY).appendThenClear("Acrylic", TextFormat.LIGHT_BLUE).append(". This text uses the ", TextFormat.LIGHT_GRAY).appendThenClear("TextBuilder", TextFormat.WHITE, TextFormat.UNDERLINE).append(".", TextFormat.LIGHT_GRAY)
                         .nextLine().append("This utilities is developed with Java and Kotlin.")
         )
-
         val timeConverter = TimeConverter.GLOBAL
         commandMap.register(StopCommand(), RegisteredCommandsCommand())
         send(

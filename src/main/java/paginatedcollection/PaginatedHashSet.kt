@@ -1,6 +1,5 @@
-package com.acrylic.paginatedcollection
+package paginatedcollection
 
-import paginatedcollection.PaginatedSet
 import java.util.*
 
-class PaginatedHashSet<T>(override val maxElementsPerPage: Int) : HashSet<T>(), PaginatedSet<T>
+class PaginatedHashSet<T>(override var maxElementsPerPage: Int) : HashSet<T>(), PaginatedSet<T>

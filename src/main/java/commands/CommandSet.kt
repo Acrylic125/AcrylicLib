@@ -1,7 +1,7 @@
 package com.acrylic.commands
 
 import com.acrylic.commands.senders.CommandSender
-import com.acrylic.paginatedcollection.PaginatedHashSet
+import paginatedcollection.PaginatedHashSet
 import com.acrylic.threads.RunningLoop
 import java.io.BufferedReader
 import java.io.InputStreamReader

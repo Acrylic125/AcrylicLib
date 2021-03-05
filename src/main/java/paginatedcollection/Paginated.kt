@@ -21,7 +21,7 @@ interface Paginated<T> {
     }
 
     fun getPage(page: Int): Int {
-        return if (page < 0) 1 else page.coerceAtMost(maxPage)
+        return if (page < 1) 1 else page.coerceAtMost(maxPage)
     }
 
     val maxPage: Int
