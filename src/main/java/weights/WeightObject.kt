@@ -1,4 +1,4 @@
-package com.acrylic.weights
+package weights
 
 interface WeightObject {
     val weight: Double

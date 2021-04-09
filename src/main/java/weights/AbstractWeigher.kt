@@ -2,17 +2,24 @@ package com.acrylic.weights
 
 import math.chance
 import math.getRandom
-import java.util.*
+import weights.WeightObject
 
 interface AbstractWeigher<T : WeightObject?> {
-    fun weights(): Double
-    fun list(): ArrayList<T>
+    fun totalWeights(): Double
+
+    fun list(): List<T>
+
     fun add(obj: T): AbstractWeigher<T>
+
     fun remove(obj: T): AbstractWeigher<T>
 
     /** This method will not be supported.  */
     @Deprecated("")
     fun recalculateWeights()
+
+    fun size(): Int {
+        return list().size;
+    }
 
     /**
      * @param obj The object.
@@ -21,7 +28,7 @@ interface AbstractWeigher<T : WeightObject?> {
      */
     fun <E : WeightObject?> getProbability(obj: E): Float {
         return if (obj != null) {
-            (obj.weight / weights()).toFloat()
+            (obj.weight / totalWeights()).toFloat()
         } else {
             0f
         }
@@ -37,14 +44,13 @@ interface AbstractWeigher<T : WeightObject?> {
     }
 
     fun get(): T? {
-        val result = getRandom(0.0, weights())
+        val result = getRandom(0.0, totalWeights())
         var current = 0.0
         for (t in list()) if (t != null) {
-            if (t.weight  > 0) {
+            if (t.weight > 0) {
                 current += t.weight
-                if (result < current) {
+                if (result < current)
                     return t
-                }
             }
         }
         return null
